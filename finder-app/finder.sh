@@ -25,7 +25,7 @@ then
 fi
 
 TOTAL_FILE_COUNT=$(find ${DIRECTORY} -type f | wc -l)
-MATCHING_LINES_COUNT=$(grep "${SEARCH_TERM}" ${DIRECTORY} | wc -l)
+MATCHING_LINES_COUNT=$(grep "${SEARCH_TERM}" ${DIRECTORY}/* | wc -l)
 
 echo "The number of files are ${TOTAL_FILE_COUNT} and the number of matching lines are ${MATCHING_LINES_COUNT}"
 exit 0
